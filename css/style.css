@@ -1,0 +1,390 @@
+body{
+    background-color: #67A7C6;
+    color: white;
+}
+
+nav li{
+    display: flex;
+	border: solid;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	margin: 4px 2px;
+	border-radius: 16px;
+    color: white;
+}
+
+
+nav li a{
+  display: block;
+  color: #000;
+  list-style-type: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+nav li:hover {
+  background-color: orange;
+}
+
+
+.currentpage{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+i.fas {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 3em;
+}
+
+/*font awesome code took from font awesome website*/
+
+
+/*Google fonts code got from https://www.w3schools.com/howto/howto_google_fonts.asp*/
+/*Google fonts applied to all pages*/
+
+.img{
+    width: 100%;
+    height: auto;
+}
+
+.skip-to-content{
+    position: absolute;
+    top: auto;
+    left: -999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+a.skip-to-content:focus,
+a.skip-to-content:active{
+    text-align: center;
+    font-family: 'Alef';
+    font-size: 1.5em;
+    color: black;
+    top: auto;
+    left: auto;
+    width:100%;
+    height:auto;
+    overflow: visible;
+}
+
+.gallery{
+	display:flex;
+	flex-direction: column;
+	flex-wrap:wrap;
+	margin: auto;
+	justify-content: space-around;
+}
+
+section{
+  width: auto;
+  display: inline-block;
+  margin: 5px;
+  border: 1px solid black;
+  padding:10px;
+  box-sizing: border-box;
+}
+
+section img.memb{
+    width:100%;
+    max-width: 100%
+}
+
+@media screen and (max-width: 850px){
+.gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+	flex-wrap: wrap;
+	margin: auto;
+
+}
+
+section{
+    width:80%;
+}
+
+h1{
+    font-family: 'Alef';
+    font-size: 1.5em;
+    margin: 15px 7.5px;
+}
+
+h2{
+    font-family: 'Alef';
+    font-size: 1.25em;
+    margin: 15px 7.5px;
+}
+
+h3{
+    font-family: 'Alef';
+    font-size: 1em;
+    margin: 15px 7.5px;
+}
+
+p{
+    font-family: 'Alef';
+    font-size: 1.15em;
+    max-width: 80%;
+    padding: 0.15em;
+    margin: 0.3em;
+}
+
+}
+
+
+@media screen and (min-width: 850px) and (max-width: 1200px){
+.gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+	flex-wrap: wrap;
+	margin: auto;
+
+}
+
+section{
+    width:40%;
+    align-content: space-around;
+}
+
+nav li{
+    float: left;
+}
+
+p{
+    font-family: 'Alef';
+    font-size: 1.25em;
+    max-width: 80%;
+    padding: 0.25em;
+    margin: 0.5em;
+}
+
+h1{
+    font-family: 'Alef';
+    font-size: 2em;
+    margin: 30px 10px;
+}
+
+h2{
+    font-family: 'Alef';
+    font-size: 1.5em;
+    margin: 20px 10px;
+}
+
+h3{
+    font-family: 'Alef';
+    font-size: 1.25em;
+    margin: 10px;
+}
+
+nav li{
+	margin: 4px 15px;
+}
+
+nav li a{
+    font-size: 1.25em;
+}
+
+}
+
+
+@media screen and (min-width: 1200px){
+.gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+	flex-wrap: wrap;
+	margin: auto;
+
+}
+
+section{
+    width:28%;
+    align-content: space-around;
+}
+
+nav li{
+    float: left;
+}
+
+p{
+    font-family: 'Alef';
+    font-size: 2em;
+    max-width: 80%;
+    padding: 0.25em;
+    margin: 0.5em;
+}
+
+h1{
+    font-family: 'Alef';
+    font-size: 3em;
+    margin: 30px 10px;
+}
+
+h2{
+    font-family: 'Alef';
+    font-size: 2.5em;
+    margin: 20px 10px;
+}
+
+h3{
+    font-family: 'Alef';
+    font-size: 2.25em;
+    margin: 10px;
+}
+
+nav li{
+	margin: 4px 25px;
+}
+
+nav li a{
+    font-size: 1.75em;
+}
+
+/*flipcard*/
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+ position: relative;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ transition: transform 0.6s;
+ transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+#luffy {
+    background-color: red;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+#zoro{
+    background-color: green;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+ #nami{
+     background-color: orange;
+     color: white;
+     transform: rotateY(180deg);
+   }
+
+  #usopp{ background-color: #EAD781;
+   color: white;
+   transform: rotateY(180deg);
+  }
+
+ #sanji{ background-color: blue;
+  color: white;
+  transform: rotateY(180deg);
+ }
+
+ #chopper{ background-color: pink;
+  color: white;
+  transform: rotateY(180deg);
+ }
+
+ #robin{ background-color: purple;
+  color: white;
+  transform: rotateY(180deg);
+ }
+
+ #franky{ background-color: #81AFC6;
+  color: white;
+  transform: rotateY(180deg);
+ }
+
+ #brook{ background-color:black;
+  color: white;
+  transform: rotateY(180deg);
+ }
+
+
+ /*typewriter*/
+.typewriter h1 {
+   font-family: 'Alef';
+   color: white;
+   overflow: hidden;
+   border-right: .15em solid white;
+   white-space: nowrap;
+   margin: 0 auto;
+   letter-spacing: .10em;
+   animation:
+     typing 3.5s steps(30, end),
+ }
+
+ @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/*callout, changed color and place to fit the overall page*/
+.callout {
+  position: fixed;
+  bottom: 500px;
+  right: 700px;
+  margin-left: 100px;
+  max-width: 300px;
+}
+
+.callout-header {
+  padding: 25px 15px;
+  background: #2F4C5A;
+  font-size: 25px;
+  color: white;
+}
+
+.callout-container {
+  padding: 15px;
+  background-color: #4B7A91;
+  font-size:15px;
+  color: white;
+
+}
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: lightblue;
+}
+
+/*sticky nav failed*/
+/* .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} */
